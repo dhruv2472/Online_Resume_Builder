@@ -23,7 +23,17 @@
         <maven.compiler.source>11</maven.compiler.source>
         <junit.version>5.9.2</junit.version>
         <itext.version>8.0.0</itext.version>
+
+
+        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- SonarQube server URL -->
+  <sonar.login>sqa_d051e9c8f76b9c24c7005c2dbf490a39b915ed56</sonar.login> <!-- Your SonarQube token -->
+  <sonar.projectKey>mvn</sonar.projectKey> <!-- Unique project key -->
+  <sonar.projectName>mvn</sonar.projectName> <!-- Project display name -->
+  <sonar.projectVersion>1.0</sonar.projectVersion> <!-- Optional: Project version -->
+  <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
     </properties>
+
+    
 
     <dependencies>
 
@@ -60,6 +70,11 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
+            <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.11.0.3922</version> <!-- Check for the latest version -->
+      </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
